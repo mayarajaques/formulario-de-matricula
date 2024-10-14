@@ -1,0 +1,17 @@
+@import url(fields/index.css);
+
+form{
+  margin-top: 3rem;
+}
+
+fieldset{
+  border: none; /*sem bordaem toda a caixa*/
+
+  display: grid;
+  gap: 1.5rem; /*espaçamento dos itens do forms*/
+}
+
+legend{
+  font: 600 1rem/1.25 var(--font-family);
+  margin-bottom: 1.5rem ;
+}
