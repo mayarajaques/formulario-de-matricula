@@ -31,5 +31,15 @@
 body{ 
   /*garantir que nunca tenha rolagem*/
   overflow: hidden;
+ font: var(--text);
+ color:var(--text-secondary);
+}
 
+h1, h2{
+  color: var(--text-primary);
+}
+
+img{ 
+ max-width: 100%; /*imagem se encaixar no tamanho da tela*/
+ height: auto;
 }

@@ -10,8 +10,10 @@
 }
 
 main {
-  overflow: auto;  /*vai ter rolagem*/
-  padding: 4rem;   /*equivale a 64px*/
+  overflow: auto;
+  /*vai ter rolagem*/
+  padding: 4rem;
+  /*equivale a 64px*/
 
 
   & .main-container {
@@ -20,6 +22,20 @@ main {
     /*largura da pagina que equivale a 528px */
     margin-left: auto;
     /*mantem o texto do lugar caso dê zoom*/
+  }
+
+  & .back {
+    display: flex;
+    /*alinhamento do botao voltar*/
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & h1 {
+    font: 600 1.5rem/1.25 var(--font-family);
+    /*600 - semibold*/
+    margin-bottom: .5rem;
   }
 }
 
@@ -30,5 +46,20 @@ aside {
 
   & .aside-container {
     max-width: 31rem;
+
+    & > img{ /*primeiro nivel da imagem*/
+    height: auto;
+    margin-top: 2rem;
+    }
+
   }
-}
+
+    & h2 {
+      font: 600 2.5rem/1.25 var(--font-family);
+      margin-bottom: .5rem;
+
+      & span {
+        color: var(--text-highlight);
+      }
+    }
+  }
