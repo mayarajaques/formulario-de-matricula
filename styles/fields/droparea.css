@@ -1,0 +1,49 @@
+.dropzone {
+  border: 1px dashed var(--stroke-default);
+  /*dashed é tracejado*/
+  border-radius: .25rem;
+
+  display: grid;
+  justify-items: center;
+  /*colocar os itens no centro*/
+  gap: .5rem;
+  /*separa os itens*/
+
+  text-align: center;
+  /*alinhar texto ao centro*/
+  padding: 1.75rem 1rem;
+
+  position: relative;
+
+  & input {
+
+    position: absolute;
+    /*absoluto dentro do dropzone*/
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    opacity: 0;
+    /*escondendo o botao de 'choose file'*/
+  }
+
+  & p {
+    color: #A8A29E;
+  }
+
+  &:hover, &:has(input:focus) { /*se o input estiver em foco ele vai aplicar*/
+    border-width: 2px;
+    border-color: var(--stroke-highlight);
+    background-color: var(--surface-secondary);
+
+    & p {
+      color: var(--text-tertiary);
+    }
+
+    & svg path {
+      /*pegando o svg no html*/
+      stroke: var(--stroke-highlight);
+      /*trocar a cor do svg*/
+    }
+
+  }
+}

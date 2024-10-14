@@ -1,3 +1,5 @@
+@import url(droparea.css);
+
 input, textarea,select{
   appearance: none; /*tira a aparencia padrao dos itens*/
   width: 100%; /*tamanho de cada input*/
@@ -20,7 +22,8 @@ label{
 /*quando ta clicado*/
 input:focus,
 select:focus,
-textarea:focus{
+textarea:focus,
+input[type="date"]:focus-within { /*pesquisa se algum elemento está em foco (selecionado*/
 outline: .25rem solid var(--surface-secondary); /*aplica a cor ao redor do inputdo lado de fora-- quando clicar*/
 border: .125rem solid var(--stroke-highlight); /*aplica a cor ao redor do input do lado de dentro- quando clicar*/
 outline-offset: .1px; /*para funcionar as cores acima no navegador safari*/
