@@ -43,3 +43,15 @@ img{
  max-width: 100%; /*imagem se encaixar no tamanho da tela*/
  height: auto;
 }
+
+.flex{
+  display: flex;
+}
+
+.flex-1{ /*pega um pedaço*/
+  flex: 1;
+}
+
+.flex-2{
+  flex: 2; /* pega dois pedaços*/
+}

@@ -1,21 +1,28 @@
 @import url(droparea.css);
 
-input, textarea,select{
-  appearance: none; /*tira a aparencia padrao dos itens*/
-  width: 100%; /*tamanho de cada input*/
-  border-radius: .5rem ; /*arrendondamento de borda*/
+input,
+textarea,
+select {
+  appearance: none;
+  /*tira a aparencia padrao dos itens*/
+  width: 100%;
+  /*tamanho de cada input*/
+  border-radius: .5rem;
+  /*arrendondamento de borda*/
   border: 1px solid var(--stroke-default);
 
-  padding: .75rem 1rem; /*em cima/baixo e laterais*/
+  padding: .75rem 1rem;
+  /*em cima/baixo e laterais*/
 
   font: var(--text);
 }
 
-label{
+label {
   font: var(--text-sm);
   color: var(--text-secondary);
 
-  display: block; /*se n colocar block, ele vai ser inline e nao consigo colocar margem bottom*/
+  display: block;
+  /*se n colocar block, ele vai ser inline e nao consigo colocar margem bottom*/
   margin-bottom: .25rem;
 }
 
@@ -23,10 +30,14 @@ label{
 input:focus,
 select:focus,
 textarea:focus,
-input[type="date"]:focus-within { /*pesquisa se algum elemento está em foco (selecionado*/
-outline: .25rem solid var(--surface-secondary); /*aplica a cor ao redor do inputdo lado de fora-- quando clicar*/
-border: .125rem solid var(--stroke-highlight); /*aplica a cor ao redor do input do lado de dentro- quando clicar*/
-outline-offset: .1px; /*para funcionar as cores acima no navegador safari*/
+input[type="date"]:focus-within {
+  /*pesquisa se algum elemento está em foco (selecionado*/
+  outline: .25rem solid var(--surface-secondary);
+  /*aplica a cor ao redor do inputdo lado de fora-- quando clicar*/
+  border: .125rem solid var(--stroke-highlight);
+  /*aplica a cor ao redor do input do lado de dentro- quando clicar*/
+  outline-offset: .1px;
+  /*para funcionar as cores acima no navegador safari*/
 
 }
 
@@ -34,29 +45,54 @@ outline-offset: .1px; /*para funcionar as cores acima no navegador safari*/
 input[type="date"] {
   position: relative;
   /*seletor*/
-  
-  &::-webkit-calendar-picker-indicator{
-    opacity: 0;  /*esconder a imagem  padrão do calendario nos navegadores*/
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    /*esconder a imagem  padrão do calendario nos navegadores*/
   }
 
-    &::before{
-      content: ""; /*todo before precisa de um content, pq estou criando um elemento html*/
-      position: absolute;
-      background: url(../../assets/icons/calendar-03.svg) center/contain; /*centralizar e ficar dentro de onde tem disponivel*/
-      right: 1rem; /*colocar no canto */
-      width: 1.25rem;
-      height: 1.25rem;
+  &::before {
+    content: "";
+    /*todo before precisa de um content, pq estou criando um elemento html*/
+    position: absolute;
+    background: url(../../assets/icons/calendar-03.svg) center/contain;
+    /*centralizar e ficar dentro de onde tem disponivel*/
+    right: 1rem;
+    /*colocar no canto */
+    width: 1.25rem;
+    height: 1.25rem;
 
-      top: 50%;/*alinhar elementos absolutos*/
-      transform: translateY(-50%); /*pegando a metade do icone para colocar no meio*/
-
-    }
+    top: 50%;
+    /*alinhar elementos absolutos*/
+    transform: translateY(-50%);
+    /*pegando a metade do icone para colocar no meio*/
 
   }
 
-  select{
-    background: url(../../assets/icons/arrow-down-01.svg) 
-    no-repeat calc(100% - 1rem); /*calcula o 100% e recua 1rem (16px)*/
-  
-  }
+}
 
+select {
+  background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+  /*calcula o 100% e recua 1rem (16px)*/
+
+}
+
+.address .flex {
+  /*na classe adress e quando tiver a classe flex*/
+  gap: 1.25rem;
+}
+
+.input-wrapper:has([disabled]) {
+  /*toda classe input-wrapper que tiver algum campo disabled entao pega ele inteiro e coloca opacidade*/
+  opacity: .5;
+
+}
+
+input {
+  &[disabled] {
+    /*o input que seja desabilitado e tenha um atributo disable nele*/
+    background-color: var(--surface-disable);
+    border: 1px solid var(--stroke-default);
+    color: var(--text-primary);
+  }
+}
