@@ -1,0 +1,34 @@
+#app {
+  display: grid;
+  grid-template-columns: 51.25% 48.75%;
+  /*divide as telas*/
+  height: 100vh;
+  /*vh é toda a parte visivel da tela*/
+  overflow: hidden;
+  /*garantindo novamente para n ter rolagem*/
+
+}
+
+main {
+  overflow: auto;  /*vai ter rolagem*/
+  padding: 4rem;   /*equivale a 64px*/
+
+
+  & .main-container {
+    /*nesting*/
+    max-width: 33rem;
+    /*largura da pagina que equivale a 528px */
+    margin-left: auto;
+    /*mantem o texto do lugar caso dê zoom*/
+  }
+}
+
+aside {
+  background-color: var(--surface-secondary);
+  padding: 4rem;
+  /*equivale a 64px*/
+
+  & .aside-container {
+    max-width: 31rem;
+  }
+}
