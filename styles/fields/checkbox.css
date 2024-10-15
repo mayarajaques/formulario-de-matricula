@@ -1,0 +1,53 @@
+.terms-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  /*display para o checkbox e o texto dos termos*/
+  gap: .75rem;
+  align-items: flex-start;
+  /*em vez de esticar (stretch) deixar no start*/
+
+  & strong {
+    font-weight: 500;
+    /*tirar peso*/
+    color: var(--text-highlight);
+
+  }
+}
+
+.checkbox-wrapper {
+
+  position: relative;
+
+  & [type="checkbox"] {
+    all: unset;
+    /*tudo que tiver antes de código, eu quero que tire*/
+    position: absolute;
+    /*deixar ele inteiro no checkbox*/
+    inset: 0;
+  }
+
+  .checkbox-image {
+
+    flex: 0 0 1.5rem;
+    /*tirar alargamento, encolhimento*/
+    height: 1.5rem;
+
+    background-image: url(../../assets/icons/checkbox-default.svg);
+    background-repeat: no-repeat;
+
+  }
+
+  /*quando passar o mouse em cima do elemento e quando tiver alguem focado*/
+  &:hover,
+  &:focus-within {
+    .checkbox-image {
+      background-image: url(../../assets/icons/checkbox-hover.svg);
+      background-repeat: no-repeat;
+    }
+  }
+  /*se tem checked e vai colocar a imagem*/
+  &:has(:checked) .checkbox-image{
+    background-image: url(../../assets/icons/checkbox-checked.svg);
+
+  }
+}
