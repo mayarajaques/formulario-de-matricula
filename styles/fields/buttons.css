@@ -1,0 +1,37 @@
+button {
+  all: unset;
+  /*tirar tudo que tiver de config do botão*/
+  font-weight: 500;
+  color: var(--stroke-highlight);
+  padding: .75rem 1.5rem;
+  /*em cima/baixo e laterais*/
+  border-radius: .5rem;
+  cursor: pointer;
+  /*faz ficar a maozinha em cima do botão*/
+
+  &.btn-primary {
+    color: white;
+    background-color: #E43A12;
+
+    &:hover,
+    /*quando passar mouse e usar o teclado*/
+    &:focus {
+      background-color: #F3541C;
+    }
+
+  }
+
+  &.btn-secondary {
+    margin-left: auto;
+    /*empurrar o espaço da esquerda*/
+    border: 1px solid var(--text-highlight);
+
+    &:hover,
+    /*quando passar mouse e usar o teclado*/
+    &:focus {
+      color: #E43A12;
+      outline: .25rem solid var(--surface-secondary); /*sombra borda do botao*/
+
+    }
+  }
+}
