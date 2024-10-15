@@ -1,0 +1,81 @@
+label+.radio-wrapper {
+  /*label que tenha seguido dele a class radio-wrapper*/
+  margin-top: 1rem;
+}
+
+.radio-wrapper {
+  /*configurar a disposição das caixas da opção de matricula*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  /*encaixe automatico , colocando o minimo da caixa que é 120px(7.5rem) e o maximo é 1fr (automatico). Ou seja nao importa a largura maior, mas a minima me importa. A maior encaixa do jeito que for*/
+
+  gap: 1rem;
+  /* gap entre eles*/
+}
+
+/*caixa de radio*/
+.radio-inner {
+  /**/
+
+  border: 1px solid var(--stroke-default);
+  border-radius: .5rem;
+
+  /*alinhar os itens*/
+  display: grid;
+  justify-items: center;
+  gap: .5rem;
+
+  padding: 2rem .5rem .5rem;
+
+  position: relative;
+
+  /*fique dentro desta caixa*/
+  & input,
+  /*pegando os inputs, com foco e com hover, e tirar todas as informações dele */
+  & input:focus,
+  & input:hover {
+    all: unset;
+    position: absolute;
+    /*fique por cima de todas as coisas*/
+    inset: 0;
+    /*shorthand de posicao, ele vai ocupar todo o elemento, para que qualquer lugar que eu clicar ele funcione*/
+
+  }
+
+  /*botao radio*/
+  .radio-image {
+    background-image: url(../../assets/icons/radio-default.svg);
+
+    /*definindo tamanho e altura do radio*/
+    width: 1.5rem;
+    height: 1.5rem;
+
+    /*posicionando a bolinha do radio*/
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+  }
+
+  &:hover,
+  &:focus-within {
+    /*quando passar o mouse em cima ou se tiver um foco (tab), eu quero que mude de cor na borda*/
+
+    border: 1px solid var(--stroke-highlight);
+
+    /* o mouse em cima e a bolinha fica vermelha*/
+    & .radio-image {
+      background-image: url(../../assets/icons/radio-hover.svg);
+    }
+  }
+
+  &:has(:checked) {
+    /* e quando ele tem alguma coisa do tipo checked (clicado)*/
+    border: 2px solid var(--stroke-highlight);
+
+    /*entao a bolinha vai receber a imagem*/
+    & .radio-image {
+      background-image: url(../../assets/icons/radio-checked.svg) ;
+      background-repeat: no-repeat;
+    }
+  }
+}
