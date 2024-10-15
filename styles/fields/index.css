@@ -95,4 +95,48 @@ input {
     border: 1px solid var(--stroke-default);
     color: var(--text-primary);
   }
+
+  &:invalid {
+    /*invalid campo email*/
+    border: 0.125rem solid var(--semantic-error);
+  }
+
+  &+small {
+    /*input que tenha small como irmao*/
+    font: var(--text-sm);
+    color: #78716C;
+
+    display: inline-block;
+    /*small tem por padrao inline. mas preciso fazer uma separação horizontal, entao preciso que ele seja block*/
+    margin-top: .25rem;
+
+
+  }
+
+  &:invalid {
+    /*quando o campo estiver invalido (required)*/
+    border: 0.125rem solid var(--semantic-error);
+  }
+
+  &+small {
+    /*input que tenha small como irmao*/
+    font: var(---text-sm);
+    color: #78716C;
+    display: inline-block;
+    /*preciso dar uma separação nele e ele é inline, para separar do item de cima preciso transformar ele para block*/
+    margin-top: .25rem;
+  }
+
+  &[required]+ .error { /* se meu input tiver um required e ao lado dele tiver um error, aplica no irmao*/
+display: flex;
+align-items: center;
+gap: .25rem;
+font: var(--text-sm);
+color: var(--semantic-error);
+margin-top: .25rem ;
+
+  }
+  &:not(:focus)valid + .error{ /*se input tiver valido e nao estiver em foco e tiver um erro do lado dele, */
+    display: none; /*tira a mensagem de invalido quando preencher*/
+  }
 }
