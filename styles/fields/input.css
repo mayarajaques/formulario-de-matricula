@@ -134,7 +134,7 @@ color: var(--semantic-error);
 margin-top: .25rem ;
 
   }
-  &:not(:focus)valid + .error{ /*se input tiver valido e nao estiver em foco e tiver um erro do lado dele, */
+  &:not(:focus):valid + .error{ /*se input tiver valido e nao estiver em foco e tiver um erro do lado dele, */
     display: none; /*tira a mensagem de invalido quando preencher*/
   }
 }
