@@ -91,7 +91,7 @@
 
               <div class="input-wrapper flex-1">
                 <label for="number">Número</label>
-                <input type="number" id="number" name="number" >
+                <input type="number" id="number" name="number">
               </div>
             </div>
 
@@ -103,84 +103,133 @@
 
               <div class="input-wrapper flex-1">
                 <label for="state">Estado</label>
-                <input type="text" id="state" name="state" disabled
-                value="SP">
+                <input type="text" id="state" name="state" disabled value="SP">
               </div>
             </div>
-      
-      </fieldset>
 
-      <fieldset class="gardian">
-        <legend>Informações do responsável</legend>
+          </fieldset>
 
-        <div class="input-wrapper">
-        <label for="gardian">Nome do responsável</label>
-        <input type="text" id="gardian" name="gardian">
-         <div>
-            <small>Principal responsável legal e contato de emergência</small>
-          </div>
-      </div>
+          <fieldset class="gardian">
+            <legend>Informações do responsável</legend>
 
-      <div class="input-wrapper">
-        <label for="phone">Telefone</label>
-        <input type="text" id="phone" name="phone" placeholder="(10) 9 8765-4321">
-      </div>
-
-      <div class="input-wrapper">
-        <label for="mail">Email</label>
-        <input type="email" name="mail" id="mail" required>
-
-      <div class="error">
-        <img src="assets/icons/alert-circle.svg" alt="icone de alerta vermelho">
-        <span>Insira um e-mail válido</span>
-      </div>
-    </div>
-
-      </fieldset>
-
-      <fieldset class="enroll-options">
-        <legend>Opções de Matrícula</legend>
-        <div class="input-wrapper">
-          <label>Selecione o turno de estudo</label>
-
-          <div class="radio-wrapper">
-            <div class="radio-inner">
-              <div class="radio-image"></div>
-              <input type="radio" name="study-shift" value="morning" id="morning">
-              <img src="assets/icons/sun-cloud-02.svg" alt="icone de sol com nuvem">
-              <label for="morning">Manhã</label>
+            <div class="input-wrapper">
+              <label for="gardian">Nome do responsável</label>
+              <input type="text" id="gardian" name="gardian">
+              <div>
+                <small>Principal responsável legal e contato de emergência</small>
+              </div>
             </div>
 
-            <div class="radio-inner">
-              <div class="radio-image"></div>
-              <input type="radio" name="study-shift" value="evening" id="evening">
-              <img src="assets/icons/sun-02.svg" alt="icone de sol">
-              <label for="evening">Tarde</label>
+            <div class="input-wrapper">
+              <label for="phone">Telefone</label>
+              <input type="text" id="phone" name="phone" placeholder="(10) 9 8765-4321">
             </div>
-          </div>
-        </div>
 
-      </fieldset>
-      </form>
-  </div>
-  </main>
+            <div class="input-wrapper">
+              <label for="mail">Email</label>
+              <input type="email" name="mail" id="mail" required>
 
-  <aside>
-    <div class="aside-container">
-      <header>
-        <img src="assets/logo.svg" alt="Logo estrelas do Amanhã">
-        <h2>Porque cada momento de
-          <span>
-            aprendizado
-          </span>
-          conta
-        </h2>
-        <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.
-        </p>
-      </header>
-      <img src="assets/pana.svg" alt="Ilustração de uma professora com os alunos prestando atenção">
-    </div>
-  </aside>
+              <div class="error">
+                <img src="assets/icons/alert-circle.svg" alt="icone de alerta vermelho">
+                <span>Insira um e-mail válido</span>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <fieldset class="enroll-options">
+            <legend>Opções de Matrícula</legend>
+            <div class="input-wrapper">
+              <label>Selecione o turno de estudo</label>
+
+              <div class="radio-wrapper">
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="study-shift" value="morning" id="morning">
+                  <img src="assets/icons/sun-cloud-02.svg" alt="icone de sol com nuvem">
+                  <label for="morning">Manhã</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="study-shift" value="evening" id="evening">
+                  <img src="assets/icons/sun-02.svg" alt="icone de sol">
+                  <label for="evening">Tarde</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <label>Em qual esporte você gostaria de inscrever seu filho?</label>
+
+              <div class="radio-wrapper">
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="football">
+                  <img src="assets/icons/football.svg" alt="icone de futebol">
+                  <label for="football">Futebol</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="basketball">
+                  <img src="assets/icons/basketball-02.svg" alt="icone de basquete">
+                  <label for="basketball">Basquete</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="swimming">
+                  <img src="assets/icons/swimming.svg" alt="icone de natação">
+                  <label for="swimming">Natação</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="yoga">
+                  <img src="assets/icons/yoga-02.svg" alt="icone de yoga">
+                  <label for="yoga">Yoga</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="volley">
+                  <img src="assets/icons/volleyball.svg" alt="icone de volley">
+                  <label for="volley">Volley</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="Boxing">
+                  <img src="assets/icons/boxing-glove-01.svg" alt="icone de Boxing">
+                  <label for="volley">Boxe</label>
+                </div>
+
+
+              </div>
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+    </main>
+
+    <aside>
+      <div class="aside-container">
+        <header>
+          <img src="assets/logo.svg" alt="Logo estrelas do Amanhã">
+          <h2>Porque cada momento de
+            <span>
+              aprendizado
+            </span>
+            conta
+          </h2>
+          <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.
+          </p>
+        </header>
+        <img src="assets/pana.svg" alt="Ilustração de uma professora com os alunos prestando atenção">
+      </div>
+    </aside>
   </div>
 
 </body>
