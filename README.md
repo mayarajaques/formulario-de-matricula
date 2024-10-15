@@ -32,9 +32,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Esta página é um formulário de matrícula da escola Estrela do Amanhã.
 
-## 🔖 Layout
-
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/design/C1DxdpiEf3BMv2UdgYrWLt/Formul%C3%A1rio-de-matr%C3%ADcula-(Community)-(Copy)?node-id=3-377&node-type=canvas&t=aLE6KgDMJTK58F8X-0). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 
 ---
