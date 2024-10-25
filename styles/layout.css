@@ -9,57 +9,116 @@
 
 }
 
+.mobile-only {
+  display: none;
+}
+
+
+
 main {
   overflow: auto;
   /*vai ter rolagem*/
   padding: 4rem;
   /*equivale a 64px*/
 
+  
 
-  & .main-container {
-    /*nesting*/
-    max-width: 33rem;
-    /*largura da pagina que equivale a 528px */
-    margin-left: auto;
-    /*mantem o texto do lugar caso dê zoom*/
+    & .main-container {
+      /*nesting*/
+      max-width: 33rem;
+      /*largura da pagina que equivale a 528px */
+      margin-left: auto;
+      /*mantem o texto do lugar caso dê zoom*/
+    }
+
+    & .back {
+      display: flex;
+      /*alinhamento do botao voltar*/
+      align-items: center;
+      gap: .5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    & h1 {
+      font: 600 1.5rem/1.25 var(--font-family);
+      /*600 - semibold*/
+      margin-bottom: .5rem;
+    }
   }
 
-  & .back {
-    display: flex;
-    /*alinhamento do botao voltar*/
-    align-items: center;
-    gap: .5rem;
-    margin-bottom: 1.5rem;
-  }
 
-  & h1 {
-    font: 600 1.5rem/1.25 var(--font-family);
-    /*600 - semibold*/
-    margin-bottom: .5rem;
-  }
-}
 
-aside {
+.desktop-only {
   background-color: var(--surface-secondary);
   padding: 4rem;
+  overflow: hidden;
   /*equivale a 64px*/
 
   & .aside-container {
     max-width: 31rem;
+   
 
-    & > img{ /*primeiro nivel da imagem*/
-    height: auto;
-    margin-top: 2rem;
+    &>img {
+      /*primeiro nivel da imagem*/
+      display: block;
+      height: auto;
+      margin-top: 2rem;
     }
 
   }
 
-    & h2 {
-      font: 600 2.5rem/1.25 var(--font-family);
-      margin-bottom: .5rem;
+  & h2 {
+    font: 600 2.5rem/1.25 var(--font-family);
+    margin-bottom: .5rem;
 
-      & span {
-        color: var(--text-highlight);
+    & span {
+      color: var(--text-highlight);
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  .desktop-only {
+    display: none;
+  
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+   
+
+ 
+
+
+  main {
+    padding: 24px;
+  }
+
+  .mobile-only {
+    display: block;
+    background-color: var(--surface-secondary);
+    border: 1px;
+    
+ 
+  }
+
+    .container-mobile{
+      min-width: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin-block: 24px;
       }
     }
+
   }
+}

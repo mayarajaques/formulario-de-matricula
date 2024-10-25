@@ -30,7 +30,7 @@
 
 body{ 
   /*garantir que nunca tenha rolagem*/
-  overflow: hidden;
+  overflow: auto;
  font: var(--text);
  color:var(--text-secondary);
 }

@@ -30,6 +30,7 @@ select:focus,
 textarea:focus,
 input[type="date"]:focus-within {
   /*pesquisa se algum elemento está em foco (selecionado*/
+  
   outline: .25rem solid var(--surface-secondary);
   /*aplica a cor ao redor do inputdo lado de fora-- quando clicar*/
   border-color: var(--stroke-highlight);
