@@ -1,7 +1,7 @@
 <h1 align="center">Formulário de Matrícula - Escola Estrela do Amanhã</h1>
 
 <p align="center">
-  Projeto desenvolvido com o curso da Rocketseat. <br>
+  Projeto desenvolvido com o curso Fullstack da Rocketseat. <br>
   <strong>Neste projeto o objetivo principal e trabalhar os conceitos básicos de Formulários.</strong>
 </p>
 
