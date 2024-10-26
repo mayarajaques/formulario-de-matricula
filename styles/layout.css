@@ -9,10 +9,6 @@
 
 }
 
-.mobile-only {
-  display: none;
-}
-
 
 
 main {
@@ -21,30 +17,30 @@ main {
   padding: 4rem;
   /*equivale a 64px*/
 
-  
 
-    & .main-container {
-      /*nesting*/
-      max-width: 33rem;
-      /*largura da pagina que equivale a 528px */
-      margin-left: auto;
-      /*mantem o texto do lugar caso dê zoom*/
-    }
 
-    & .back {
-      display: flex;
-      /*alinhamento do botao voltar*/
-      align-items: center;
-      gap: .5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    & h1 {
-      font: 600 1.5rem/1.25 var(--font-family);
-      /*600 - semibold*/
-      margin-bottom: .5rem;
-    }
+  & .main-container {
+    /*nesting*/
+    max-width: 33rem;
+    /*largura da pagina que equivale a 528px */
+    margin-left: auto;
+    /*mantem o texto do lugar caso dê zoom*/
   }
+
+  & .back {
+    display: flex;
+    /*alinhamento do botao voltar*/
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & h1 {
+    font: 600 1.5rem/1.25 var(--font-family);
+    /*600 - semibold*/
+    margin-bottom: .5rem;
+  }
+}
 
 
 
@@ -56,7 +52,7 @@ main {
 
   & .aside-container {
     max-width: 31rem;
-   
+
 
     &>img {
       /*primeiro nivel da imagem*/
@@ -82,43 +78,35 @@ main {
 @media only screen and (max-width: 768px) {
 
   .desktop-only {
-    display: none;
-  
+    display: flex;
+
+
+    & .aside-container {
+
+      h2,
+      span,
+      p {
+        display: none;
+      }
+
+      & .flex-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    }
   }
+
 
   #app {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: auto;
     overflow-y: auto;
-   
 
- 
-
-
-  main {
-    padding: 24px;
-  }
-
-  .mobile-only {
-    display: block;
-    background-color: var(--surface-secondary);
-    border: 1px;
-    
- 
-  }
-
-    .container-mobile{
-      min-width: 360px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        margin-block: 24px;
-      }
+    main {
+      padding: 24px;
     }
-
   }
 }
